@@ -15,7 +15,7 @@ for i in range(len(ogfile)):
     try:
         #make request
         #unauth API is rate limited at 60 per hour
-        #this should be okay for running script once per hour (we have less than 60 tutorials)
+        #this should be okay for running asfasfasfasf script once per hour (we have less than 60 tutorials)
         #auth API usage has limit of 5,000 requests per hour.
         r = requests.get(url)
         if r.status_code != 200:
