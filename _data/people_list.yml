@@ -56,7 +56,7 @@
   status: active
 
 - name: Alex J. Best
-  affiliation: King’s College London
+  affiliation: King's College London
   website: https://alexjbest.github.io/
   email: alex.j.best@gmail.com
   github: alexjbest
@@ -124,6 +124,7 @@
   github: BD-00
   email: dieterle@mathematik.uni-kl.de
   status: active
+  comment: Master student of Claus Fieker as of 2024
 
 - name: Christian Eder
   affiliation: University of Kaiserslautern-Landau
@@ -138,6 +139,7 @@
   email: faross@math.uni-sb.de
   website: https://www.uni-saarland.de/lehrstuhl/weber-moritz/team/nicolas-faross.html
   status: active
+  comment: who ?
 
 - name: Kamillo Ferry
   affiliation: TU Berlin
@@ -228,6 +230,7 @@
   email: kurtz@mathematik.uni-kl.de
   github: mgkurtz
   status: active
+  comment: ask Max?
 
 - name: Nando Leijenhorst
   affiliation: Delft University of Technology
@@ -324,12 +327,14 @@
   affiliation: Universität Oldenburg
   github: Syz-MS
   status: active
+  comment: Associated with Anne Fruhbig Kruger as of 2024
 
 - name: Sreevatsa Sasisekar
   github: Sreevatsa2k
   email: sasiseka@mathematik.uni-kl.de
   affiliation: University of Kaiserslautern-Landau
   status: active
+  comment: Master student of Claus Fieker as of 2024
 
 - name: Bjoern Schaefer
   affiliation: Saarland University
@@ -391,6 +396,7 @@
 - name: Grégory Vanuxem
   github: gvanuxem
   status: active
+  comment: Who ?
 
 - name: Laura Voggesberger
   affiliation: Ruhr-Universität Bochum
@@ -415,10 +421,10 @@
 
 - name: Yichao Yu
   affiliation: Duke University
-  website: yuyichao.com
   email: yyc1992@gmail.com
   github: yuyichao
   status: active
+  comment: Who ?
 
 - name: Matthias Zach
   affiliation: University of Kaiserslautern-Landau
@@ -450,9 +456,8 @@
 - name: Giovanni De Franceschi
   affiliation: University of Kaiserslautern-Landau
   status: retired
-  comment: Group theory
+  comment: Group theory - who ?
   github: GDeFranceschi
-  email: 52538321+GDeFranceschi@users.noreply.github.com
 
 - name: Alexander Dinges
   affiliation: University of Kaiserslautern-Landau
@@ -466,11 +471,12 @@
   affiliation: University of Kaiserslautern-Landau
   status: retired
   github: raulepure
+  comment: Used to work in TU KL, under whom and for what ? who ?
 
 - name: Rafael Fourquet
   affiliation: University of Kaiserslautern-Landau
   status: retired
-  comment: General infrastructure
+  comment: General infrastructure who ?
   github: rfourquet
 
 - name: Sebastian Gutsche
@@ -483,6 +489,7 @@
   affiliation: University of Kaiserslautern-Landau
   status: retired
   github: wbhart
+  comment: Initial contributor to Oscar.
 
 - name: Florian Heiderich
   affiliation: University of Siegen
@@ -496,13 +503,15 @@
   email: fredrik.johansson@gmail.com
   github: fredrik-johansson
   status: retired
+  comment: The FLINT guy.
 
 - name: Marek Kaluba
   affiliation: KIT Karlsruhe
-  website: https://www.math.kit.edu/iag7/~kaluba/de
-  email: marek.kaluba@kit.edu
+  website: https://kalmarek.github.io/
+  email: kalamar@mailbox.org
   github: kalmarek
   status: retired
+  comment: Freelance mathematician, formerly at KIT
 
 - name: Avinash (Avi) Kulkarni
   affiliation: Dartmouth College
@@ -510,6 +519,7 @@
   email: avinash.a.kulkarni@dartmouth.edu
   github: a-kulkarn
   status: retired
+  comment: Who ?
 
 - name: Frank Lübeck
   affiliation: RWTH Aachen University
@@ -531,11 +541,13 @@
   email: sachinkmohan@proton.me
   github: sachinkm308
   status: retired
+  comment: Who ?
 
 - name: Oleksandr Motsak
   affiliation: IMAGINARY
   status: retired
   github: malex984
+  comment: Who ?
 
 - name: Markus Pfeiffer
   affiliation: St Andrews
@@ -546,6 +558,7 @@
   affiliation: University of Kaiserslautern-Landau
   status: retired
   github: delphinepol
+  comment: Used to be a postdoc at Kaiserslautern, until ~2020
 
 - name: Martin Raum
   affiliation: Chalmers University
@@ -558,6 +571,7 @@
   affiliation: University of Kaiserslautern-Landau
   status: retired
   github: tthsqe12
+  comment: who ?
 
 - name: Carlo Sircana
   affiliation: University of Kaiserslautern-Landau
@@ -576,7 +590,7 @@
   website: https://www.res.cmb.ac.lk/mathematics/mhmj-suranimalee/
   email: suranimalee@maths.cmb.ac.lk
   status: retired
-  comment: PhD student of Claus Fieker
+  comment: Completed her PhD with Claus Fieker in about 2020
   github: suranimalee
 
 - name: Erec Thorn
@@ -593,6 +607,7 @@
   website: https://www.saschatimme.com/
   email: mail@saschatimme.com
   status: retired
+  comment: Homotopy continuation people
 
 - name: Oguzhan Yürük
   affiliation: TU Berlin
@@ -600,3 +615,4 @@
   email: yuruk@math.tu-berlin.de
   github: OguzhanYueruek
   status: retired
+  comment: Postdoc of Michael Joswig in Berlin
