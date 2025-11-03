@@ -62,23 +62,18 @@ for repo in repoList:
         os.chdir(repo.split('/')[-1])
 
     print("Generating list of authors active in past year...")
-    gitlog = subprocess.run(['git', 'shortlog', '--verbose', '-se', '--since=1 year ago', '--group=author', '--group=trailer:co-authored-by'], capture_output=True, shell=False, check=False)
-    er = gitlog.stderr
-    if er:
-        print(er.decode())
-        exit()
-    output = gitlog.stdout
+    gitlog = subprocess.run(['git', 'log', '--since=1 year ago', '--format=%aN <%aE>%n%(trailers:key=Co-authored-by)'], capture_output=True, shell=False, check=True)
+    output = gitlog.stdout.decode().strip().split('\n')
+    output = list(set(output))
+    output.remove('')
     dnamelist = []
-    for line in output.decode().strip().split("\n"):
-        # line format: "  42  My Name <mymail@example.com>"
-        parts = line.strip().split("\t")
-        if len(parts) < 2:
+    for line in output:
+        # line format: "My Name <mymail@example.com>"
+        if not '<' in line or not '>' in line:
             continue
-        name_email = parts[-1]
-        if "<" in name_email and ">" in name_email:
-            name = name_email.split("<")[0].strip()
-            email = name_email.split("<")[1].split(">")[0].strip()
-            dnamelist.append([name, email])
+        name = line.split("<")[0].strip().replace('Co-authored-by: ', '')
+        email = line.split("<")[1].split(">")[0].strip()
+        dnamelist.append([name, email])
     print(dnamelist)
 
     namelist.extend(dnamelist)
@@ -172,7 +167,8 @@ for repo in repoList:
             if not flag:
                 # a co author we don't know about at all
                 gitlog = subprocess.Popen(['git', 'shortlog', '--format="%h %s %(trailers:key=Co-authored-by)"'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                gitcommit = subprocess.Popen(['grep', i[0]], stdin=gitlog.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                filteredlog = subprocess.Popen(['grep', 'Co-authored-by'], stdin=gitlog.stdout, stdout=subprocess.PIPE)
+                gitcommit = subprocess.Popen(['grep', i[0]], stdin=filteredlog.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 output = gitcommit.communicate()[0].decode()
                 output = output.strip().strip('"').split()[0]
                 newCoauthorList.append([i[0], i[1], repo, output])
