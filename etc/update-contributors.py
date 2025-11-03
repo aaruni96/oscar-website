@@ -62,7 +62,7 @@ for repo in repoList:
         os.chdir(repo.split('/')[-1])
 
     print("Generating list of authors active in past year...")
-    gitlog = subprocess.run(['git', 'shortlog', '-se', '--since=1 year ago', '--group=author', '--group=trailer:co-authored-by'], capture_output=True, shell=False, check=False)
+    gitlog = subprocess.run(['git', 'shortlog', '--verbose', '-se', '--since=1 year ago', '--group=author', '--group=trailer:co-authored-by'], capture_output=True, shell=False, check=False)
     er = gitlog.stderr
     if er:
         print(er.decode())
