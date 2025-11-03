@@ -62,8 +62,11 @@ for repo in repoList:
         os.chdir(repo.split('/')[-1])
 
     print("Generating list of authors active in past year...")
-    gitlog = subprocess.Popen(['git', 'shortlog', '-se', '--since=1 year ago', '--group=author', '--group=trailer:co-authored-by'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    output, _ = gitlog.communicate()
+    gitlog = subprocess.run(['git', 'shortlog', '-se', '--since=1 year ago', '--group=author', '--group=trailer:co-authored-by'], capture_output=True, shell=False, check=True)
+    er = gitlog.stderr
+    if er:
+        print(er.decode())
+    output = gitlog.stdout
     dnamelist = []
     for line in output.decode().strip().split("\n"):
         # line format: "  42  My Name <mymail@example.com>"
