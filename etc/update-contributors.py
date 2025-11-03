@@ -66,6 +66,7 @@ for repo in repoList:
     er = gitlog.stderr
     if er:
         print(er.decode())
+        exit()
     output = gitlog.stdout
     dnamelist = []
     for line in output.decode().strip().split("\n"):
