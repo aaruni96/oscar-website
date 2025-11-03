@@ -170,6 +170,7 @@ for repo in repoList:
                 filteredlog = subprocess.Popen(['grep', 'Co-authored-by'], stdin=gitlog.stdout, stdout=subprocess.PIPE)
                 gitcommit = subprocess.Popen(['grep', i[0]], stdin=filteredlog.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 output = gitcommit.communicate()[0].decode()
+                print(output)
                 output = output.strip().strip('"').split()[0]
                 newCoauthorList.append([i[0], i[1], repo, output])
         else:
